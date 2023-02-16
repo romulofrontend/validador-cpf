@@ -19,6 +19,15 @@ function validacao(){
     msgNumbers.style.display = "block";
     msgError.style.display = "block";
     msgSuccess.style.display = "none";
-  }   
+  } else {
+    msgNumbers.style.display = "none";
+    if(cpfFieldValue.length != 11) {   
+      msgError.style.display = "block";
+      msgSuccess.style.display = "none"; 
+    } else {
+      msgError.style.display = "none";   
+      msgSuccess.style.display = "block";   
+    }
+  }  
   
 }
